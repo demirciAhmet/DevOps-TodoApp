@@ -2,7 +2,7 @@
 
 An infrastructure setup for a multi-container Node.js, Express, Prisma, and PostgreSQL todo application using modern DevOps practices with Ansible, Docker, and GitHub Actions.
 
-Check live demo: `https://app.demirciahmet.me/` 
+Check live demo: https://app.demirciahmet.me/
 
 ## Features
 - **Automated deployment** with Ansible.
