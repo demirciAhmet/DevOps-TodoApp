@@ -1,0 +1,12 @@
+---
+- name: Deploy Todo Application
+  hosts: app_server
+  roles:
+    - role: common
+      tags: common
+    - role: docker
+      tags: docker
+    - role: security
+      tags: security
+    - role: application
+      tags: application

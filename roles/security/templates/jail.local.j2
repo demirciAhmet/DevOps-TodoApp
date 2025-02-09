@@ -1,0 +1,36 @@
+[DEFAULT]
+bantime = {{ fail2ban_bantime }}
+findtime = {{ fail2ban_findtime }}
+maxretry = {{ fail2ban_maxretry }}
+
+# SSH protection
+[sshd]
+enabled = true
+port = ssh
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+
+# Protect HTTP/HTTPS
+[http-auth]
+enabled = true
+port = http,https
+filter = apache-auth
+logpath = /var/log/apache2/error.log
+
+# Protect against repeated failed authentication attempts
+[nginx-http-auth]
+enabled = true
+filter = nginx-http-auth
+port = http,https
+logpath = /var/log/nginx/error.log
+
+# Protect Node.js application
+[nodejs-app]
+enabled = true
+port = 5000
+filter = nodejs-app
+logpath = /var/log/syslog
+maxretry = 6
+findtime = 600
+bantime = 3600

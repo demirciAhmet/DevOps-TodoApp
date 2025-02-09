@@ -1,0 +1,46 @@
+###
+GET http://localhost:5000
+
+### Register
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "123@example",
+    "password": "123456"
+}
+
+### Login
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "123@example",
+    "password": "123456"
+}
+
+### Get todos
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NTAxMDE4LCJleHAiOjE3Mzg1ODc0MTh9.aoxRXPzyQLghpjZ-X0R7tU0fySE9ubjHcx-e95Nr8sk
+
+### Add todo
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NTAxMDE4LCJleHAiOjE3Mzg1ODc0MTh9.aoxRXPzyQLghpjZ-X0R7tU0fySE9ubjHcx-e95Nr8sk
+Content-Type: application/json
+
+{
+    "task": "Finish the backend project"
+}
+
+### Mark todo as "Completed"
+PUT http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NTAxMDE4LCJleHAiOjE3Mzg1ODc0MTh9.aoxRXPzyQLghpjZ-X0R7tU0fySE9ubjHcx-e95Nr8sk
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### Delete todo
+DELETE http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NTAxMDE4LCJleHAiOjE3Mzg1ODc0MTh9.aoxRXPzyQLghpjZ-X0R7tU0fySE9ubjHcx-e95Nr8sk

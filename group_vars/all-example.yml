@@ -1,0 +1,25 @@
+# Docker configuration
+docker_users:
+  - "{{ ansible_user }}"
+docker_compose_version: "2.17.2"
+
+# Application configuration
+app_dir: /opt/todo-app
+app_port: 5000
+
+# Server Configuration
+nginx_port: 80
+nginx_worker_processes: auto
+nginx_worker_connections: 1024
+ssl_enabled: false
+server_name: localhost
+
+# Security configurations
+ufw_allowed_ports:
+  - "22"
+  - "80"
+  - "443"
+
+fail2ban_bantime: 3600
+fail2ban_findtime: 600
+fail2ban_maxretry: 5

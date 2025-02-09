@@ -1,0 +1,36 @@
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Upgrade all packages
+  apt:
+    upgrade: dist
+
+- name: Install essential packages
+  apt:
+    name: "{{ packages }}"
+    state: present
+  vars:
+    packages:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+      - python3-pip
+      - ufw
+      - fail2ban
+      - wget
+      - vim
+      - htop
+      - git
+      - unzip
+      - rsync
+
+
+- name: Allow SSH before enabling UFW
+  ufw:
+    rule: allow
+    port: '22'
+    proto: tcp
+
