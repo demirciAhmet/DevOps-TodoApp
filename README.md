@@ -2,7 +2,7 @@
 
 An infrastructure setup for a multi-container Node.js, Express, Prisma, and PostgreSQL todo application using modern DevOps practices with Ansible, Docker, and GitHub Actions.
 
-Check live demo: https://app.demirciahmet.me/
+Check live demo: https://todo.demirciahmet.me/
 
 ## Features
 - **Automated deployment** with Ansible.
@@ -88,7 +88,7 @@ Ensure the following tools and versions are installed before setting up and depl
 ### 1. Clone the repository
 ```sh
 git clone https://github.com/demirciAhmet/DevOps-TodoApp.git
-cd https://github.com/demirciAhmet/DevOps-TodoApp.git
+cd DevOps-TodoApp
 ```
 
 ### 2. Copy and configure example files
