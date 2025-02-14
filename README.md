@@ -87,8 +87,8 @@ Ensure the following tools and versions are installed before setting up and depl
 ## Setup Instructions
 ### 1. Clone the repository
 ```sh
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/demirciAhmet/DevOps-TodoApp.git
+cd https://github.com/demirciAhmet/DevOps-TodoApp.git
 ```
 
 ### 2. Copy and configure example files
